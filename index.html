@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MCX Commodity Premium</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1665424625233296');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1665424625233296&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{
+background:#050505;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:#fff;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:220%;
+height:220%;
+background:
+radial-gradient(circle,#ffb30022 0%,transparent 45%),
+radial-gradient(circle,#0099ff18 0%,transparent 45%);
+animation:rotatebg 25s linear infinite;
+}
+
+@keyframes rotatebg{
+100%{transform:rotate(360deg);}
+}
+
+.card{
+position:relative;
+width:90%;
+max-width:430px;
+padding:35px;
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(18px);
+border-radius:25px;
+border:1px solid rgba(255,255,255,.12);
+text-align:center;
+box-shadow:0 0 35px rgba(255,179,0,.25);
+animation:float 4s ease-in-out infinite;
+z-index:10;
+}
+
+@keyframes float{
+50%{transform:translateY(-10px);}
+}
+
+.logo{
+font-size:45px;
+animation:spin 6s linear infinite;
+}
+
+@keyframes spin{
+100%{transform:rotate(360deg);}
+}
+
+h1{
+margin-top:15px;
+font-size:34px;
+background:linear-gradient(90deg,#FFD700,#fff,#00bfff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-size:300%;
+animation:shine 5s linear infinite;
+}
+
+@keyframes shine{
+100%{background-position:300%;}
+}
+
+.type{
+margin:18px 0;
+font-size:18px;
+color:#ddd;
+height:28px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:15px 40px;
+background:#ffb300;
+color:#000;
+text-decoration:none;
+font-weight:bold;
+border-radius:50px;
+transition:.4s;
+box-shadow:0 0 20px #ffb300;
+}
+
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 35px #ffb300;
+}
+
+.note{
+margin-top:20px;
+font-size:12px;
+color:#aaa;
+line-height:1.6;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+<div class="logo">🛢️</div>
+
+<h1>MCX CRUDE OIL</h1>
+
+<div class="type" id="typing"></div>
+
+<a href="https://t.me/+adA2iYeX1OIwYjQ1" class="btn">
+JOIN TELEGRAM
+</a>
+
+<div class="note">
+Educational Commodity Market Updates<br>
+Risk Management • Market Research • Learning Community
+</div>
+
+</div>
+
+<script>
+const text=[
+"Crude Oil Updates",
+"Gold & Silver Analysis",
+"Commodity Research",
+"Premium Telegram Community"
+];
+
+let i=0,j=0,erase=false;
+
+function type(){
+
+const el=document.getElementById("typing");
+
+if(!erase){
+
+el.innerHTML=text[i].substring(0,j++);
+if(j>text[i].length){
+erase=true;
+setTimeout(type,1200);
+return;
+}
+
+}else{
+
+el.innerHTML=text[i].substring(0,j--);
+
+if(j==0){
+erase=false;
+i=(i+1)%text.length;
+}
+
+}
+
+setTimeout(type,erase?35:80);
+
+}
+
+type();
+</script>
+
+</body>
+</html>
